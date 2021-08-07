@@ -14167,6 +14167,7 @@ dtype: float64</pre>
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Discussion-1.1.2:-Assess-Missing-Data-in-Each-Column">Discussion 1.1.2: Assess Missing Data in Each Column<a class="anchor-link" href="#Discussion-1.1.2:-Assess-Missing-Data-in-Each-Column">&#182;</a></h4><p>(Double click this cell and replace this text with your own text, reporting your observations regarding the amount of missing data in each column. Are there any patterns in missing values? Which columns were removed from the dataset?)</p>
+<p>The amount of missing data is 8373929 and this is a large number of missing values. Yes there is a pattrens the columns with the same starting name have the same number of missing values, for example all the columns starting with PLZ8 have 116515 missing values and vice versa. AGER_TYP, GEBURTSJAHR, TITEL_KZ, ALTER_HH, KK_KUNDENTYP, and KBA05_BAUMAX are the columns that are the outliers and removed from the dataset.</p>
 
 </div>
 </div>
@@ -14349,6 +14350,7 @@ dtype: float64</pre>
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Discussion-1.1.3:-Assess-Missing-Data-in-Each-Row">Discussion 1.1.3: Assess Missing Data in Each Row<a class="anchor-link" href="#Discussion-1.1.3:-Assess-Missing-Data-in-Each-Row">&#182;</a></h4><p>(Double-click this cell and replace this text with your own text, reporting your observations regarding missing data in rows. Are the data with lots of missing values are qualitatively different from data with few or no missing values?)</p>
+<p>The amount of missing data is 891221 and this is a large number of missing values. The data with High missing values have different as you can see from the plot above. Also the number of data with High missing values is lower than the number of the data Low missing data.</p>
 
 </div>
 </div>
@@ -14498,6 +14500,7 @@ Name: attribute, dtype: int64</pre>
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Discussion-1.2.1:-Re-Encode-Categorical-Features">Discussion 1.2.1: Re-Encode Categorical Features<a class="anchor-link" href="#Discussion-1.2.1:-Re-Encode-Categorical-Features">&#182;</a></h4><p>(Double-click this cell and replace this text with your own text, reporting your findings and decisions regarding categorical features. Which ones did you keep, which did you drop, and what engineering steps did you perform?)</p>
+<p>We keep all the columns except CAMEO_DEU_2015. Notice that the CAMEO_DEU_2015 column have a value of 44 so it will result to 44 unnecessary varibles, so it should be dropped.The engineering steps we take by dividing the data binary, and multi-level then see how many each column have varibles.</p>
 
 </div>
 </div>
@@ -14607,6 +14610,7 @@ Name: attribute, dtype: int64</pre>
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Discussion-1.2.2:-Engineer-Mixed-Type-Features">Discussion 1.2.2: Engineer Mixed-Type Features<a class="anchor-link" href="#Discussion-1.2.2:-Engineer-Mixed-Type-Features">&#182;</a></h4><p>(Double-click this cell and replace this text with your own text, reporting your findings and decisions regarding mixed-value features. Which ones did you keep, which did you drop, and what engineering steps did you perform?)</p>
+<p>We keep all the columns except PRAEGENDE_JUGENDJAHRE and CAMEO_INTL_2015.We engineer two new variables for PRAEGENDE_JUGENDJAHRE Investigation which was PRAEGENDE_DECADE and PRAEGENDE_MVT. And we engineer two new variables for CAMEO_INTL_2015 Investigation which was HOUSE_HOLD_TYPE and LIFE_STAGE.</p>
 
 </div>
 </div>
@@ -14997,6 +15001,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Discussion-2.1:-Apply-Feature-Scaling">Discussion 2.1: Apply Feature Scaling<a class="anchor-link" href="#Discussion-2.1:-Apply-Feature-Scaling">&#182;</a></h3><p>(Double-click this cell and replace this text with your own text, reporting your decisions regarding feature scaling.)</p>
+<p>In feature scaling we choose to load the dataset again and then we send the data to clean_data function that return datafram without missing values and missing_data datafarme with missing values. Then we use Imputer to fit and transform the data without missing values. Fainaly we use StandardScaler to scale our data.</p>
 
 </div>
 </div>
@@ -15298,6 +15303,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Discussion-2.3:-Interpret-Principal-Components">Discussion 2.3: Interpret Principal Components<a class="anchor-link" href="#Discussion-2.3:-Interpret-Principal-Components">&#182;</a></h3><p>(Double-click this cell and replace this text with your own text, reporting your observations from detailed investigation of the first few principal components generated. Can we interpret positive and negative values from them in a meaningful way?)</p>
+<p>I decided to retain 35 principal components, as it expalains more than 90% variances while reducing the number of features by 50% approximately, which will give us informative data, also will neglect uninformative data or features.</p>
 
 </div>
 </div>
@@ -15458,6 +15464,7 @@ Average distance for 11 clusters: 31.154603258253633
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Discussion-3.1:-Apply-Clustering-to-General-Population">Discussion 3.1: Apply Clustering to General Population<a class="anchor-link" href="#Discussion-3.1:-Apply-Clustering-to-General-Population">&#182;</a></h3><p>(Double-click this cell and replace this text with your own text, reporting your findings and decisions regarding clustering. Into how many clusters have you decided to segment the population?)</p>
+<p>I decided to choose 8 because 8 seems to be the elbow.</p>
 
 </div>
 </div>
@@ -15809,6 +15816,8 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Discussion-3.3:-Compare-Customer-Data-to-Demographics-Data">Discussion 3.3: Compare Customer Data to Demographics Data<a class="anchor-link" href="#Discussion-3.3:-Compare-Customer-Data-to-Demographics-Data">&#182;</a></h3><p>(Double-click this cell and replace this text with your own text, reporting findings and conclusions from the clustering analysis. Can we describe segments of the population that are relatively popular with the mail-order company, or relatively unpopular with the company?)</p>
+<p>based on the above analysis, for first cluster which is have 0 clusters, we see that the customers seen with the mail-order company.</p>
+<p>but for the second cluster which is have 1 cluster, we see that the customers seen more attracted in purchasing by mail order sales, same for third and fouth clusters.</p>
 
 </div>
 </div>
