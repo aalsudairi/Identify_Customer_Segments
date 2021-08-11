@@ -14500,7 +14500,7 @@ Name: attribute, dtype: int64</pre>
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Discussion-1.2.1:-Re-Encode-Categorical-Features">Discussion 1.2.1: Re-Encode Categorical Features<a class="anchor-link" href="#Discussion-1.2.1:-Re-Encode-Categorical-Features">&#182;</a></h4><p>(Double-click this cell and replace this text with your own text, reporting your findings and decisions regarding categorical features. Which ones did you keep, which did you drop, and what engineering steps did you perform?)</p>
-<p>We keep all the columns except CAMEO_DEU_2015. Notice that the CAMEO_DEU_2015 column have a value of 44 so it will result to 44 unnecessary varibles, so it should be dropped.</p>
+<p>I keep all the columns except CAMEO_DEU_2015. Notice that the CAMEO_DEU_2015 column have a value of 44 so it will result to 44 unnecessary varibles, so it should be dropped.The engineering steps we take by dividing the data binary, and multi-level then see how many each column have varibles.</p>
 
 </div>
 </div>
@@ -15131,7 +15131,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Discussion-2.2:-Perform-Dimensionality-Reduction">Discussion 2.2: Perform Dimensionality Reduction<a class="anchor-link" href="#Discussion-2.2:-Perform-Dimensionality-Reduction">&#182;</a></h3><p>(Double-click this cell and replace this text with your own text, reporting your findings and decisions regarding dimensionality reduction. How many principal components / transformed features are you retaining for the next step of the analysis?)</p>
-<p>I decided to retain 35 principal components, as it expalains more than 90% variances while reducing the number of features by 50% approximately, which will give us informative data, also will neglect uninformative data or features.</p>
+<p>We decided to retain 25 principal components, as it expalains more than 90% variances while reducing the number of features by 50% approximately, which will give us informative data, also will neglect uninformative data or features.</p>
 
 </div>
 </div>
@@ -15304,7 +15304,6 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Discussion-2.3:-Interpret-Principal-Components">Discussion 2.3: Interpret Principal Components<a class="anchor-link" href="#Discussion-2.3:-Interpret-Principal-Components">&#182;</a></h3><p>(Double-click this cell and replace this text with your own text, reporting your observations from detailed investigation of the first few principal components generated. Can we interpret positive and negative values from them in a meaningful way?)</p>
-<p>I decided to retain 35 principal components, as it expalains more than 90% variances while reducing the number of features by 50% approximately, which will give us informative data, also will neglect uninformative data or features.</p>
 
 </div>
 </div>
@@ -15852,6 +15851,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <li><a href="https://github.com/drakobian/intro-to-ml-tensorflow/tree/master/customer_segment">https://github.com/drakobian/intro-to-ml-tensorflow/tree/master/customer_segment</a></li>
 <li><a href="https://github.com/AbdulmajeedAlOmari/identify-customer-segments">https://github.com/AbdulmajeedAlOmari/identify-customer-segments</a></li>
 <li><a href="https://github.com/wengsengh/Identify-Customer-Segments">https://github.com/wengsengh/Identify-Customer-Segments</a></li>
+<li><a href="https://github.com/HamadAlAssafi/Identify_Customer_Segments_IMLND/blob/main/Identify_Customer_Segments_IMLND/Identify_Customer_Segments.ipynb">https://github.com/HamadAlAssafi/Identify_Customer_Segments_IMLND/blob/main/Identify_Customer_Segments_IMLND/Identify_Customer_Segments.ipynb</a></li>
 </ul>
 <p>Lesson 4: PCA mini project solution</p>
 
